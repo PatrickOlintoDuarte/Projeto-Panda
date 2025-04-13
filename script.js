@@ -1,9 +1,11 @@
+// Formulário
 document.getElementById("formContato").addEventListener("submit", function (e) {
     e.preventDefault();
     alert("Mensagem enviada com sucesso! Obrigado por entrar em contato.");
     this.reset();
   });
   
+  // Reveal on Scroll
   function revealOnScroll() {
     const reveals = document.querySelectorAll(".reveal");
   
@@ -23,4 +25,12 @@ document.getElementById("formContato").addEventListener("submit", function (e) {
   
   window.addEventListener("scroll", revealOnScroll);
   window.addEventListener("load", revealOnScroll);
+  
+  // Menu responsivo (hamburguer)
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+  
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
   
